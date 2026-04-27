@@ -1,0 +1,24 @@
+{
+  "name": "parallax",
+  "version": "1.0.0",
+  "description": "Parallax — мультибот-шлюз для 4-х Telegram ботов",
+  "main": "parallax.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node parallax.js",
+    "dev": "node --watch parallax.js",
+    "postinstall": "cd modules/smeta && npm install && cd ../accounting && npm install"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "dotenv": "^16.6.1",
+    "grammy": "^1.42.0",
+    "node-cron": "^3.0.3"
+  },
+  "notes": {
+    "accounting": "Требует ESM-совместимости. Модуль загружается через динамический import().",
+    "smeta": "Требует компиляции TypeScript. cd modules/smeta && npm install && npx tsc",
+    "karnizcal": "Полностью перенесён в modules/karnizcal/index.js (нет внешних зависимостей).",
+    "delivery": "Требует наличия modules/delivery/db.js (скопировать из delivery_bot_nodejs/db.js)"
+  }
+}

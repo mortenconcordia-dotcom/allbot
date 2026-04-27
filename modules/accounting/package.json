@@ -1,0 +1,11 @@
+{
+  "name": "parallax-accounting",
+  "version": "1.0.0",
+  "description": "Accounting module for Parallax bot",
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "dotenv": "^16.6.1",
+    "grammy": "^1.42.0"
+  }
+}
